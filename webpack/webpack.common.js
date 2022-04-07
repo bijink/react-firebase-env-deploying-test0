@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-   mode: "development",
-   entry: path.resolve(__dirname, './src/index.jsx'),
-   devtool: "eval-source-map",
+   entry: path.resolve(__dirname, '../src/index.jsx'),
    module: {
       rules: [
          {
@@ -23,12 +21,12 @@ module.exports = {
       extensions: ['*', '.js', '.jsx'],
    },
    output: {
-      path: path.resolve(__dirname, './build'),
+      path: path.resolve(__dirname, '../build'),
       filename: 'bundle.js',
    },
    plugins: [
       new HtmlWebpackPlugin({
-         template: path.resolve(__dirname, './public/index.html'),
+         template: path.resolve(__dirname, '../public/index.html'),
       }),
    ]
 };
